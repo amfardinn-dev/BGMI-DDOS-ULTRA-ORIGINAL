@@ -127,10 +127,6 @@ def attack_command(message):
     user_id = message.from_user.id
     chat_id = message.chat.id
 
-    if not check_user_approval(user_id):
-        send_not_approved_message(chat_id)
-        return
-
     try:
         bot.send_message(
             chat_id,
@@ -205,9 +201,6 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
-    if not check_user_approval(message.from_user.id):
-        send_not_approved_message(message.chat.id)
-        return
 
     if message.text == "Buy Access! 💰":
         bot.reply_to(message, "* 𝗩𝗜𝗣 𝗗𝗗𝗢𝗦 𝗣𝗥𝗜𝗖𝗘\n\n[𝗣𝗿𝗲𝗺𝗶𝘂𝗺]\n> DAY - 200 INR\n> WEEK - 700 INR\n\n[𝗣𝗹𝗮𝘁𝗶𝗻𝘂𝗺]\n> MONTH - 1600 INR\n\nDM TO BUY *", parse_mode='Markdown')
