@@ -10,11 +10,14 @@ import certifi
 import asyncio
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 from threading import Thread
+from dotenv import load_dotenv
+
+load_dotenv()
 
 loop = asyncio.get_event_loop()
-TOKEN = '8950460772:AAFPk2XuVJucztoz2LNAnwElbqSdK_Z50hs'
-MONGO_URI = 'mongodb+srv://ihatemosquitos9:JvOK4gNs0SH5SVw9@cluster0.1pd5kt5.mongodb.net/?appName=Cluster0'
-CHANNEL_ID = -1003902407402
+TOKEN = os.getenv("TOKEN")
+MONGO_URI = os.getenv("MONGO_URI")
+CHANNEL_ID = os.getenv("CHANNEL_ID")
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
