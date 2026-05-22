@@ -14,7 +14,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-loop = asyncio.get_event_loop()
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
 TOKEN = os.getenv("TOKEN")
 MONGO_URI = os.getenv("MONGO_URI")
 CHANNEL_ID = os.getenv("CHANNEL_ID")
