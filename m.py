@@ -16,7 +16,7 @@ load_dotenv()
 
 loop = asyncio.new_event_loop()
 asyncio.set_event_loop(loop)
-TOKEN = os.getenv("7175088392:AAFwmIaBwBOLXzQvWKqDJneXdf9VpV8KeS4")
+TOKEN = os.getenv("7175088392:AAHgNjKGKiWHp9ZrXcqrW3nIbwFOGYWwSWA")
 MONGO_URI = os.getenv("MONGO_URI")
 CHANNEL_ID = os.getenv("CHANNEL_ID")
 
@@ -24,7 +24,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 db = client['NOOB']
 users_collection = db.users
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(1676270773)
 
 REQUEST_INTERVAL = 1
 blocked_ports = [8700, 20000, 443, 17500, 9031, 20002, 20001]
