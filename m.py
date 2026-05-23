@@ -16,7 +16,7 @@ load_dotenv()
 
 loop = asyncio.new_event_loop()
 asyncio.set_event_loop(loop)
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.getenv("7175088392:AAFwmIaBwBOLXzQvWKqDJneXdf9VpV8KeS4")
 MONGO_URI = os.getenv("MONGO_URI")
 CHANNEL_ID = os.getenv("CHANNEL_ID")
 
