@@ -16,9 +16,9 @@ load_dotenv()
 
 loop = asyncio.new_event_loop()
 asyncio.set_event_loop(loop)
-TOKEN = os.getenv("7175088392:AAHgNjKGKiWHp9ZrXcqrW3nIbwFOGYWwSWA")
-MONGO_URI = os.getenv("MONGO_URI")
-CHANNEL_ID = os.getenv("CHANNEL_ID")
+TOKEN = os.getenv("7175088392:AAFjNXeTb4xhlQhUiosAaVEFpgtcpgcJD7c")
+MONGO_URI = os.getenv("mongodb+srv://chestifardeen12_db_user:eoGSLMy4XfRJLFVg@cluster0.tvdlxin.mongodb.net/?appName=Cluster0")
+CHANNEL_ID = os.getenv("@Bgmiddosss122_bot")
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 client = MongoClient(MONGO_URI, tlsCAFile=certifi.where())
